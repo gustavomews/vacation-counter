@@ -74,12 +74,3 @@ pnpm run start
 ```txt
 http://localhost:5500
 ```
-
-## Sobre o `index.html`
-
-Sim: agora ele não fica mais na raiz.
-
-- fonte: `src/index.html`
-- arquivo usado para rodar: `dist/index.html`
-
-Isso deixa o projeto organizado entre código-fonte e artefato final de build.
