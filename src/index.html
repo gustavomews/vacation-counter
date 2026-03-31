@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contador de Férias</title>
+  <meta name="description" content="Contador de férias com dias úteis, não úteis, totais e saldo restante." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="hero panel" aria-label="Resumo de férias">
+      <div class="window-bar">
+        <div class="traffic" aria-hidden="true">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+
+        <div class="badge">Contagem regressiva</div>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Alternar tema">
+          Tema escuro
+        </button>
+      </div>
+
+      <h1>Férias chegando em <span id="startDateText">--/--/----</span></h1>
+      <p class="subtitle">Dias faltantes até começar, separados entre úteis e não úteis, com saldo dos seus dias de férias.</p>
+
+      <div class="countdown">
+        <div class="big-days"><span id="remainingDays">0</span> dias</div>
+        <div class="micro" id="clockText">Atualizando...</div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Métricas">
+      <article class="card card-delay-1 panel">
+        <small>Total até férias</small>
+        <strong id="totalDays">0</strong>
+        <span>Dias corridos restantes</span>
+      </article>
+
+      <article class="card card-delay-2 panel">
+        <small>Dias úteis</small>
+        <strong id="businessDays">0</strong>
+        <span>Segunda a sexta (com feriados nacionais)</span>
+      </article>
+
+      <article class="card card-delay-3 panel">
+        <small>Dias não úteis</small>
+        <strong id="nonBusinessDays">0</strong>
+        <span>Fins de semana e feriados nacionais</span>
+      </article>
+
+      <article class="card card-delay-4 panel">
+        <small>Férias restantes</small>
+        <strong id="vacationLeft">0</strong>
+        <span id="vacationStatus">Saldo atual de férias</span>
+      </article>
+    </section>
+
+    <section class="timeline panel" aria-label="Linha do tempo">
+      <div class="timeline-line"><span>Início das férias</span><b id="vacStartLabel">--/--/----</b></div>
+      <div class="timeline-line"><span>Último dia de férias</span><b id="vacEndLabel">--/--/----</b></div>
+      <div class="timeline-line"><span>Retorno ao trabalho</span><b id="backToWorkLabel">--/--/----</b></div>
+
+      <div class="progress-wrap" aria-hidden="true">
+        <div class="progress" id="progressToStart"></div>
+      </div>
+
+      <p class="note">Regra dos dias úteis: segunda a sexta, excluindo feriados nacionais (Carnaval e Corpus Christi não entram).</p>
+    </section>
+  </main>
+
+  <script defer src="js/config.js"></script>
+  <script defer src="js/date-utils.js"></script>
+  <script defer src="js/holidays.js"></script>
+  <script defer src="js/vacation-calculator.js"></script>
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/app.js"></script>
+</body>
+</html>
