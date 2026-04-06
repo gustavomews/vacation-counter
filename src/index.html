@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contador de Férias</title>
   <meta name="description" content="Contador de férias com dias úteis, não úteis, totais e saldo restante." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -29,7 +30,10 @@
         </button>
       </div>
 
-      <h1>Férias chegando em <span id="startDateText">--/--/----</span></h1>
+      <h1 class="hero-title">
+        <img class="hero-icon" src="favicon.svg" alt="" aria-hidden="true" />
+        Férias chegando em <span id="startDateText">--/--/----</span>
+      </h1>
       <p class="subtitle">Dias faltantes até começar, separados entre úteis e não úteis, com saldo dos seus dias de férias.</p>
 
       <div class="countdown">

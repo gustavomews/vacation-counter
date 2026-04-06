@@ -163,6 +163,20 @@ h1 {
   letter-spacing: -0.02em;
 }
 
+.hero-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-icon {
+  width: clamp(32px, 5vw, 42px);
+  height: clamp(32px, 5vw, 42px);
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+}
+
 .subtitle {
   margin: 8px 0 0;
   color: var(--text-2);
